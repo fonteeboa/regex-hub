@@ -1,0 +1,2 @@
+// Regex para validar código SQL (e.g., SELECT, INSERT, UPDATE, DELETE, DROP, UNION, TABLE, OR, AND, --, /*, */, ")
+export const sqlPattern = /(?:^|\s|[;()]|\b)(?:SELECT(?:\s+(?:["'`][^"'`]+["'`]|\*|\w+)(?:\s*,\s*(?:["'`][^"'`]+["'`]|\*|\w+))*)?(?:\s+FROM(?!\s+(?:the|menu|store)\b)|\s+\*\s+FROM)|(?:INSERT\s+INTO|UPDATE\s+[\w_]+\s+SET|DELETE\s+FROM|DROP\s+TABLE|UNION\s+(?:ALL\s+)?SELECT|\bTABLE\s+\w+|(?:OR|AND)\s+(?:[\w\s-]*?[=<>]+[\s\d'"]+|[\w_]+\s*=\s*['"][^'"]*['"]|\w+\s*=\s*\d+)|\-\-|\/\*[\s\S]*?\*\/|;\s*(?:DROP|DELETE|UPDATE|INSERT))(?:\s|$|[;)]))/i;

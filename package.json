@@ -1,0 +1,33 @@
+{
+  "name": "regex-vault",
+  "version": "1.0.0",
+  "description": "regex-vault is a centralized library of regular expressions for validation, security, and efficient data manipulation.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "test": "vitest --run --coverage",
+    "test:changed": "vitest --run --coverage --changed",
+    "test:sonar": "vitest --run --coverage --reporter=junit --outputFile=sonar-reports/sonar-report.xml"
+  },
+  "keywords": [
+    "regex",
+    "library",
+    "validation",
+    "security",
+    "typescript"
+  ],
+  "author": "Fonteeboa",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fonteeboa/regex-vault.git"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.0.4",
+    "vitest": "^3.0.4"
+  }
+}
