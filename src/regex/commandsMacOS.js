@@ -1,5 +1,5 @@
 // Regex para validar comandos de Firewall no macOS
-export const macOSFirewallRegex = /^sudo\s+\/usr\/libexec\/ApplicationFirewall\/socketfilterfw\s+--(?:setglobalstate\s+(?:on|off)|setstealthmode\s+(?:on|off)|listapps|add\s+"[^"]+"|remove\s+"[^"]+")$/;
+export const macOSFirewallRegex = /^sudo\s+\/usr\/libexec\/ApplicationFirewall\/socketfilterfw\s+--(?:setglobalstate\s+(?:on|off)|setstealthmode\s+(?:on|off)|listapps|add\s+"[^"]+"|remove\s+"[^"]+")$/
 // Regex para validar comandos de Bluetooth no macOS
 export const macOSBluetoothRegex = /^sudo\s+(?:defaults\s+write\s+\/Library\/Preferences\/com\.apple\.Bluetooth\.plist\s+ControllerPowerState\s+-int\s+[01]|killall\s+-HUP\s+bluetoothd)$/;
 // Regex para validar comandos de listagem de USB no macOS

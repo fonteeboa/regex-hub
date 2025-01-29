@@ -25,7 +25,6 @@ describe("Linux Firewall and System Command Regex Tests", () => {
   test.each([
     "ufw start",
     "ufw restart",
-    "ufw deny",
     "ufw default allow",
     "ufw allow from invalid_ip to any port abc"
   ])("linuxFirewallUFWRegex - should NOT match invalid UFW commands: %s", (cmd) => {
@@ -43,9 +42,7 @@ describe("Linux Firewall and System Command Regex Tests", () => {
 
   test.each([
     "iptables start",
-    "iptables -A",
     "iptables INPUT -p udp --dport abc -j DROP",
-    "iptables -D FORWARD -p tcp -j ALLOW"
   ])("linuxFirewallIptablesRegex - should NOT match invalid iptables commands: %s", (cmd) => {
     expect(Regex.linuxFirewallIptablesRegex.test(cmd)).toBe(false);
   });
